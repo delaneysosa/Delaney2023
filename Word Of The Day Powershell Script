@@ -1,0 +1,21 @@
+# Set API key and base URL
+$apiKey = "YOUR_API_KEY"
+$baseUrl = "https://www.dictionaryapi.com/api/v3/references/collegiate/json/"
+
+# Get current date and format it to match API endpoint
+$date = Get-Date
+$dateString = $date.ToString("yyyy/MM/dd")
+
+# Build API endpoint URL
+$url = $baseUrl + "wordOfTheDay/date/" + $dateString + "?key=" + $apiKey
+
+# Invoke API endpoint and parse JSON response
+$response = Invoke-RestMethod -Uri $url
+$word = $response[0].meta.id
+$definition = $response[0].shortdef[0]
+
+# Display word of the day to user
+Write-Host "Today's word of the day is:" -ForegroundColor Green
+Write-Host $word.ToUpper() -ForegroundColor Yellow
+Write-Host $definition
+

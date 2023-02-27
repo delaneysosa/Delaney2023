@@ -1,8 +1,7 @@
 # Delaney2023
 Current Projects that I am working on/finished in 2023 (-: 
-Current projects created using Java, Javascript, or Swift.
-Apache NetBeans IDE 14, Xcode
-Maven
+Current projects created using Java, Javascript, Powershell, or Swift.
+Applications used: Apache NetBeans IDE 14, Xcode, Maven, Command Prompt
 
 This is where I come to dump my projects and scripts that I create
 
